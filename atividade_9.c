@@ -3,12 +3,25 @@
 #include <math.h>
 
 int main() {
+    FILE *arquivo;
+    arquivo = fopen("/home/matheuswnb/arquivo.txt", "w");
+
+    if (arquivo == NULL){
+        return 1;
+    };
+
     char nome[15];
     int tamanho_nome;
     
     printf("Digite seu nome:\n");
     printf("Nome: ");
     scanf("%s", &nome);
+
+    fprintf(arquivo, "O nome do usuário é: %s\n", nome);
+    fprintf(arquivo, "Arquivo criado em C.\n");
+    fprintf(arquivo, "Agora irei mostrar os números: \n");
+
+    fclose(arquivo);
     
     tamanho_nome = strlen(nome);
 
