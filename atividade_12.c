@@ -33,13 +33,16 @@ int main(){
                 "Posição do carro: %d.\n", velocidade_do_carro, posicao_do_carro
             );
 
+            printf("CARRO MULTADO!\n");
+            system("clear");
+
             break;
 
         }
 
         for (aceleracao_do_carro; aceleracao_do_carro <= 10; aceleracao_do_carro++){
             velocidade_do_carro = velocidade_do_carro + 0.5;
-            usleep(100000);
+            usleep(50000);
         }
 
         aceleracao_do_carro = 0;
@@ -57,7 +60,7 @@ int main(){
             "Posição do carro: %d.\n"
             "Distância do radar 1: %d.\n", velocidade_do_carro, posicao_do_carro, distancia_do_radar_1
         );
-        
+
     }
 
     fclose(multas);
