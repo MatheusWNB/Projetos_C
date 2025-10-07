@@ -16,7 +16,7 @@ int main(){
     const int metros_trajeto = 5;
 
     //Definindo as características do radar
-    const int posicao_do_radar_1 = 80;
+    const int posicao_do_radar_1 = 100;
     const int alcance_do_radar = posicao_do_radar_1 - 5;
     const int limite_velocidade = 100;
 
@@ -76,13 +76,22 @@ int main(){
             "Distância do radar 1: %d.\n", velocidade_do_carro, posicao_do_carro, distancia_do_radar_1
         );
 
-        if (loops == quantidade_de_loops){
+        if (loops == quantidade_de_loops - 1){
+            system("clear");
             switch(permissao_multa){
                 case 1:
                 printf("Carro multado");
 
                 case 2:
                 printf("Carro não multado");
+
+                fprintf(multas, "CARRO NÃO MULTADO!\n---------------------\n");
+                fprintf(multas,
+                "Velocidade do carro: %0.1f.\n"
+                "Posição do carro: %d.\n"
+                "Distância do radar 1: %d.\n", velocidade_do_carro, posicao_do_carro, distancia_do_radar_1
+                );
+
 
             }
         }
